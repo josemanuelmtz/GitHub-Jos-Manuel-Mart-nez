@@ -1,0 +1,37 @@
+// Definir pines del LED RGB
+#define LED_R 16
+#define LED_G 17
+#define LED_B 18
+
+void setup() {
+  // Inicializar los pines del LED RGB como salidas
+  pinMode(LED_R, OUTPUT);
+  pinMode(LED_G, OUTPUT);
+  pinMode(LED_B, OUTPUT);
+}
+
+void loop() {
+  // Encender el LED rojo
+  digitalWrite(LED_R, HIGH);
+  digitalWrite(LED_G, LOW);
+  digitalWrite(LED_B, LOW);
+  delay(1000); // Esperar un segundo
+
+  // Encender el LED verde
+  digitalWrite(LED_R, LOW);
+  digitalWrite(LED_G, HIGH);
+  digitalWrite(LED_B, LOW);
+  delay(1000); // Esperar un segundo
+
+  // Encender el LED azul
+  digitalWrite(LED_R, LOW);
+  digitalWrite(LED_G, LOW);
+  digitalWrite(LED_B, HIGH);
+  delay(1000); // Esperar un segundo
+
+  // Encender el LED blanco (mezcla de rojo, verde y azul)
+  digitalWrite(LED_R, HIGH);
+  digitalWrite(LED_G, HIGH);
+  digitalWrite(LED_B, HIGH);
+  delay(1000); // Esperar un segundo
+}

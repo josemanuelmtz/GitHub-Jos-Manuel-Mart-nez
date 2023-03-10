@@ -1,0 +1,22 @@
+// Definir pin del sensor láser
+#define LASER_PIN 2
+
+void setup() {
+  // Inicializar el pin del sensor láser como entrada
+  pinMode(LASER_PIN, INPUT);
+  Serial.begin(9600); // Iniciar la comunicación serial
+}
+
+void loop() {
+  // Leer el estado del sensor láser
+  int laserState = digitalRead(LASER_PIN);
+  
+  if (laserState == HIGH) {
+    // Si el láser detecta un objeto, imprimir en la consola serie
+    Serial.println("Objeto detectado");
+  } else {
+    // Si el láser no detecta un objeto, imprimir en la consola serie
+    Serial.println("Sin objeto");
+  }
+  delay(100); // Esperar un décimo de segundo antes de volver a leer el sensor
+}
